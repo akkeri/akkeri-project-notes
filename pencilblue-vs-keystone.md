@@ -46,7 +46,7 @@ sysctl -p
 - Betra er að velja Gulp en Grunt fyrir utanumhald (ef Grunt er valið leiðir það til þess að setja þarf upp marga módúla aftur áður en hægt er að kalla á `node keystone`).
 - Almennt virðist generatorinn (þ.e. `yo keystone`) mjög brothættur. Ekki sérlega traustvekjandi.
 
-Ég valdi annars nunchucks sem template-bakenda (sjálfgefna gildið er jade, sem ég er ekki hrifinn af).
+Ég valdi annars nunjucks sem template-bakenda (sjálfgefna gildið er jade, sem ég er ekki hrifinn af).
 
 ### „Out of the box“-upplifun
 
@@ -68,6 +68,32 @@ sysctl -p
 
 Keystone hefur mjög ákveðna galla en gæti samt alveg gengið sem grunnur til að vinna út frá.
 
-## Pencilblue
+## PencilBlue
 
-(TBD)
+### Uppsetning
+
+Uppsetning PencilBlue gengur mun auðveldar og fljótar fyrir sig en uppsetning Keystone. Mér tókst ekki að framkalla nein vandamál, að öðru leyti en því að viðvaranir fylgja innsetningu sumra bower-módúlanna ef maður velur að taka þá með þegar `pbctrl install [dir]` er keyrt. Það virðist þó ekki hafa áhrif á virkni uppsetningarinnar sem slíkrar.
+
+### „Out of the box“-upplifun
+
+Þótt PencilBlue sé léttara í keyrslu en Keystone virðist það hafa mun fleiri fítusa, og módelin sem grunnuppsetningin miðast við mun nær því sem við þurfum.
+
+- Notar einhvers konar uppskiptingu eininga sem minnir á MVC, en fylgir ekki sama mynstri og express í þeim efnum. Controller-hlutinn er í `controllers/` á meðan módel virðast vera í mismunandi undirmöppum `include/`. Sniðmát (view-hlutinn) eru í `templates/`-undirmöppum í tilteknum `plugins`.
+- Template-málið er eitthvað heimasmíðað, líklega vegna sérþarfa höfunda m.t.t. erfða í sambandi við plugins. Virkar hvorki aðlaðandi né öflugt við fyrstu sýn.
+- Starter-prójektið sem er búið til með `pbctrl install` er klónað úr [github-prójektinu](https://github.com/pencilblue/pencilblue.git) sem hefur bæði kosti og galla.
+- Plugins-hugmyndin er áhugaverð sem extension-leið, en tiltölulega lítið til af fyrirfram tilbúnum plugins enn sem komið er: eitthvað um [20 talsins](https://pencilblue.org/plugins). Þeir [óska eftir fleirum](https://github.com/pencilblue/pencilblue/wiki/Requested-Plugins), og ef PencilBlue verður ofaná og við búum til eitthvað nægilega almennt af því tagi, er sjálfsagt að leggja það til prójektsins.
+- Ólíkt Keystone virðist ekki vera nein asset pipeline innbyggð í kerfið, og enginn sérstakur stuðningur við less/sass. Sjálfsagt er samt auðvelt að bæta því við.
+
+### Skjölun
+
+Skjölunin (sem er mestmegnis á [github-wiki prójektsins](https://github.com/pencilblue/pencilblue/wiki) er mun betri fyrir einhvern sem er að kynna sér kerfið en skjölun Keystone og sýnir/vísar í praktísk dæmi um hvernig hægt er að extenda það.
+
+Á síðari stigum gæti það þó orðið ókostur að tæknilegri skjölun (um einingar, API o.s.frv.) er svolítið ábótavant.
+
+### Heildarumsögn
+
+Þrátt fyrir frekar óaðlaðandi sniðmát og skort á less/sass-stuðningi stendur PencilBlue Keystone framar að flestu leyti.
+
+## Niðurstaða
+
+Mér (Baldri) virðist PencilBlue mun líklegra en Keystone til að nýtast okkur sem góður grunnur að vef og vefumsjónarkerfi Akkeris.

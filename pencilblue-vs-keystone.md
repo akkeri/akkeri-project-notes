@@ -92,8 +92,10 @@ Skjölunin (sem er mestmegnis á [github-wiki prójektsins](https://github.com/p
 
 ### Heildarumsögn
 
-Þrátt fyrir frekar óaðlaðandi sniðmát og skort á less/sass-stuðningi stendur PencilBlue Keystone framar að flestu leyti.
+Þrátt fyrir frekar óaðlaðandi sniðmát og skort á less/sass-stuðningi stendur PencilBlue Keystone framar að flestu leyti varðandi þá fítusa sem skipta máli fyrir okkur.
 
 ## Niðurstaða
 
-Mér (Baldri) virðist PencilBlue mun líklegra en Keystone til að nýtast okkur sem góður grunnur að vef og vefumsjónarkerfi Akkeris.
+PencilBlue er mun nær því að uppfylla þarfir okkar til að byrja með. Á móti kemur að kerfið hefur minna community en Keystone og byggir ekki á Express (sem er mest notaða vefkerfið fyrir node). Þess vegna er líklegra að Keystone sé traustari grunnur fyrir útvíkkanir og viðbætur.
+
+Á fundi starfshópsins 7. nóvember 2015 var af þessum ástæðum í raun ákveðið að nota Keystone.

@@ -44,7 +44,7 @@ tobbi    | 3900 | mongodb://localhost/akkeri-keystone-tobbi
 
 Almennt væri þá t.d. allt bilið 3100–3199 frátekið fyrir Önnu (ef hún skyldi vilja keyra fleiri en eina uppsetningu í einu eða einhverjar aðrar þjónustur), og auðvitað hliðstætt fyrir aðra notendur.
 
-Auk þess þarf að stilla breytuna `COOKIE_SECRET`, sem á að vera 64 handahófskennd tákn að lengd. Við munum ekki nota Cloudinary, svo að það er ekki þörf á `CLOUDINARY_URL`. Ef við viljum senda póst þarf að stilla `MANDRILL_API_KEY` sem stendur, þótt það muni líklega breytast er fram líða stundir.
+Auk þess þarf að stilla breytuna `COOKIE_SECRET`, sem á að vera 64 handahófskennd tákn að lengd. Við munum ekki nota Cloudinary, svo að það er ekki þörf á `CLOUDINARY_URL`, né `MANDRILL_API_KEY` til póstsendinga (þess í stað er sent gegnum SMTP-þjón sem er keyrandi á vélinni sjálfri).
 
 Hér er dæmi um `.env`-skrá fyrir notandann bk:
 
@@ -52,7 +52,6 @@ Hér er dæmi um `.env`-skrá fyrir notandann bk:
 PORT=3200
 MONGODB_URL=mongodb://localhost/akkeri-keystone-bk
 COOKIE_SECRET=1I))HVy!,O2k%-psS/v%VGrE+o+-.@bz9v>2PQt)]N}t/)^o|F>xyOENl+&dASc|
-MANDRILL_API_KEY=wmfnUX99FDjqXCD_cS2fdQ
 ```
 
 Heildarlisti yfir stillingar sem hægt er að setja í `.env` virðist vera sem hér segir:

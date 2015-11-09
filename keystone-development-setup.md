@@ -30,7 +30,7 @@ Til að stofna vinnusvæði gerið þið eftirfarandi:
 Ég legg til að við komum okkur saman um að nota eftirfarandi stillingar fyrir þessar tvær breytur:
 
 Notandi  | PORT | MONGODB_URL
---------–|------|--------------------------------------------
+-------- | ---- | -------------------------------------------
 anna     | 3100 | mongodb://localhost/akkeri-keystone-anna
 bk       | 3200 | mongodb://localhost/akkeri-keystone-bk
 daggala  | 3300 | mongodb://localhost/akkeri-keystone-daggala

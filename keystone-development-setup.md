@@ -17,11 +17,12 @@ Upphaflegt innihald hófst einfaldlega sem grunnuppsetning af Keystone, sem búi
 Til að stofna vinnusvæði gerið þið eftirfarandi:
 
 1. `. env-422-sys/bin/activate` (eða hvað sem þið nú kölluðuð nodeenv-möppuna).
-2. Klónið þessa kóðahirslu: `git clone /export/repos/akkeri-keystone.git`.
-3. `cd akkeri-keystone` (eða inn í möppuna með nýja vinnutrénu ef þið ákváðuð að kalla hana eitthvað annað).
-4. `npm install`
-5. Búa til skrána `.env` – sjá hér að neðan.
-6. `node keystone` (þetta er augljóslega best að gera í tmux-sessjón).
+2. `npm install -g nodemon`
+3. Klónið þessa kóðahirslu: `git clone /export/repos/akkeri-keystone.git`.
+4. `cd akkeri-keystone` (eða inn í möppuna með nýja vinnutrénu ef þið ákváðuð að kalla hana eitthvað annað).
+5. `npm install`
+6. Búa til skrána `.env` – sjá hér að neðan.
+7. `nodemon keystone` (helst í tmux sessjón) til að ræsa þróunarserver. Athugið að `node keystone` gerir ekki live reload ef eitthvað breytist, þess vegna er `nodemon` þægilegra.
 
 ## Skráin `.env`
 

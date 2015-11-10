@@ -123,3 +123,21 @@ undir `dependencies` í `package.json` yfir í
 ```
 
 keyra því næst `npm install` upp á nýtt og bæta inn þeim pökkum sem kvartað verður yfir þegar maður reynir að ræsa þróunarserverinn að nýju.
+
+## Thumbnailer: `imaginary`
+
+Nú er kominn stuðningur við að gera smámyndir með því að kalla á viðeigandi slóð sem er byggð á slóðinni á sjálfa myndina. Dæmi: Ef maður er með myndina `http://akkeri.premis.is:3200/uploads/images/2015/11/10/ecf1d87e55a4ab1e7fd76fffd8e1dfd9.jpg`, þá má t.d. fá fram 200x200 „kroppaðan“ ferning úr henni með því að biðja um `http://akkeri.premis.is:3200/tn/crop/2015/11/10/ecf1d87e55a4ab1e7fd76fffd8e1dfd9.jpg?h&height=200&width=200`.
+
+Það er jafnframt kominn template helper til að hjálpa til að búa til slíkar slóðir, t.d.
+
+    {{{thumbnailUrl image action=crop width=250 height='auto'}}}
+
+Auk `crop` er hægt að tilgreina `resize` og  `thumbnail` sem aðgerðir.
+
+Þessi virkni byggist á [imaginary](https://github.com/h2non/imaginary) eftir Tomás Aparicio. Ef þið viljið setja upp þróunarumhverfi á ykkar eigin vél þurfið þið því að setja upp þennan hugbúnað.
+
+Á þróunarvélinni keyrir hann með eftirfarandi stillingum:
+
+    imaginary -a 127.0.0.1 -p 8088 -http-cache-ttl 3600 -enable-url-source
+
+Kveikt er á `-enable-url-source` til að þetta geti gagnast öllum með þróunarsvæði á vélinni, en mun hraðvirkara væri að binda virknina við tiltekna slóð í skráarkerfinu í staðinn, með sviss á borð við `-mount /home/akkeri/akkeri-keystone/public/uploads/images`. Þá þarf hins vegar að breyta `routes/thumbnailer.js` til samræmis. Þetta verður hugsanlega hægt að stilla í gegnum `.env` síðar meir.

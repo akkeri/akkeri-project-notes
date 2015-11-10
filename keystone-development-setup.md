@@ -126,7 +126,7 @@ keyra því næst `npm install` upp á nýtt og bæta inn þeim pökkum sem kvar
 
 ## Thumbnailer: `imaginary`
 
-Nú er kominn stuðningur við að gera smámyndir með því að kalla á viðeigandi slóð sem er byggð á slóðinni á sjálfa myndina. Dæmi: Ef maður er með myndina `http://akkeri.premis.is:3200/uploads/images/2015/11/10/ecf1d87e55a4ab1e7fd76fffd8e1dfd9.jpg`, þá má t.d. fá fram 200x200 „kroppaðan“ ferning úr henni með því að biðja um `http://akkeri.premis.is:3200/tn/crop/2015/11/10/ecf1d87e55a4ab1e7fd76fffd8e1dfd9.jpg?h&height=200&width=200`.
+Nú er kominn stuðningur við að gera smámyndir með því að kalla á viðeigandi slóð sem er byggð á slóðinni á sjálfa myndina. Dæmi: Ef maður er með myndina `$DEVROOT/uploads/images/2015/11/10/ecf1d87e55a4ab1e7fd76fffd8e1dfd9.jpg`, þá má t.d. fá fram 200x200 „kroppaðan“ ferning úr henni með því að biðja um `$DEVROOT/tn/crop/2015/11/10/ecf1d87e55a4ab1e7fd76fffd8e1dfd9.jpg?h&height=200&width=200` (þar sem `$DEVROOT` er vélarheiti og port viðkomandi þróunarservers).
 
 Það er jafnframt kominn template helper til að hjálpa til að búa til slíkar slóðir, t.d.
 

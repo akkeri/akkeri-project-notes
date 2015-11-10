@@ -52,9 +52,14 @@ Hér er dæmi um `.env`-skrá fyrir notandann bk:
 PORT=3200
 MONGODB_URL=mongodb://localhost/akkeri-keystone-bk
 COOKIE_SECRET=1I))HVy!,O2k%-psS/v%VGrE+o+-.@bz9v>2PQt)]N}t/)^o|F>xyOENl+&dASc|
+IMAGE_UPLOAD_DIR=public/uploads/images
 ```
 
-Heildarlisti yfir stillingar sem hægt er að setja í `.env` virðist vera sem hér segir:
+Síðasta breytan, `IMAGE_UPLOAD_DIR`, er fyrir okkar kerfi fremur en fyrir Keystone og er semsagt einungis notuð í kóða sem við höfum skrifað. Sjálfgefna gildið fyrir breytuna er það sem sést hér fyrir ofan.
+
+Gera má ráð fyrir að fleiri svona stillibreytur sem við höfum skilgreint bætist í hópinn á síðari stigum.
+
+Heildarlisti yfir stillingar sem Keystone sjálft gerir ráð fyrir að hægt sé að setja í `.env` virðist vera sem hér segir:
 
 * `ALLOWED_IP_RANGES`
 * `AZURE_STORAGE_ACCESS_KEY`

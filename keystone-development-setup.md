@@ -110,19 +110,11 @@ Heildarlisti yfir stillingar sem Keystone sjálft gerir ráð fyrir að hægt s�
 
 ## Athugasemd um útgáfu 0.4
 
-Útgáfa 0.4 af Keystone er væntanleg innan tíðar – vonandi í desemberbyrjun 2015. Hún felur í sér miklar breytingar á stjórnborðinu, sem verður byggt á React og mun auðveldara að útvíkka og breyta en núverandi lausn. Ef maður vill er hægt að prófa alpha-release af þessari útgáfu með því að breyta línunni
+Útgáfa 0.4 af Keystone er væntanleg innan tíðar – vonandi í desemberbyrjun 2015. Hún felur í sér miklar breytingar á stjórnborðinu, sem verður byggt á React og mun auðveldara að útvíkka og breyta en núverandi lausn.
 
-```
-    "keystone": "^0.3.14",
-```
+Við munum vinna á grundvelli alpha-útgáfu af 0.4, a.m.k. þar til hún er tilbúin, en þar sem við (a) þurfum hugsanlega að breyta einhverju í kerfinu til að ná fram þeirri virkni sem við viljum; og (b) þurfum tiltölulega stöðugan grundvöll sem við höfum fulla stjórn yfir, bendir `keystone`-línan í `package.json` á okkar eigin klón af Keystone, þ.e. þar stendur hvorki `"keystone": "^0.3.14"` (fyrir núverandi stable útgáfu) né `"keystone": "https://github.com/keystonejs/keystone.git"` (fyrir núverandi þróunarútgáfu), heldur öllu heldur `"keystone": "https://github.com/akkeri/keystone.git"`.
 
-undir `dependencies` í `package.json` yfir í
-
-```
-    "keystone": "https://github.com/keystonejs/keystone.git",
-```
-
-keyra því næst `npm install` upp á nýtt og bæta inn þeim pökkum sem kvartað verður yfir þegar maður reynir að ræsa þróunarserverinn að nýju.
+Munið að keyra `npm install` upp á nýtt við og við ef eitthvað hefur breyst í Keystone-útgáfunni sem við erum að vinna út frá.
 
 ## Thumbnailer: `imaginary`
 

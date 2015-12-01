@@ -2,6 +2,8 @@
 
 Þar sem um viðkvæmar upplýsingar gæti verið að ræða, er kóðahirslan að Keystone-vefnum okkar ekki á Github, heldur í miðlægri hirslu á þróunarvélinni. Sem stendur er slóðin á hirsluna `/export/repos/akkeri-keystone.git`. Til að geta pushað þangað ætti að nægja að vera í `team`-grúppunni.
 
+Þegar pushað er í kóðahirsluna ættu að berast skilaboð þar um inn á akkeri.slack.com (merkt `incoming-webhook`).
+
 Upphaflegt innihald hófst einfaldlega sem grunnuppsetning af Keystone, sem búin var til með `yo keystone`. Kostir sem valdir voru í því ferli:
 
 * Nafn: Akkeri Keystone.
@@ -20,9 +22,9 @@ Til að stofna vinnusvæði gerið þið eftirfarandi:
 2. `npm install -g nodemon`
 3. Klónið þessa kóðahirslu: `git clone /export/repos/akkeri-keystone.git`.
 4. `cd akkeri-keystone` (eða inn í möppuna með nýja vinnutrénu ef þið ákváðuð að kalla hana eitthvað annað).
-5. `npm install`
+5. `npm install` – þetta er reyndar ekki lengur nauðsynlegt nema skipt hafi verið um node-útgáfu, þar sem allir nauðsynlegir módular ættu að vera undir `node_modules` og semsagt inni í kóðahirslunni.
 6. Búa til skrána `.env` – sjá hér að neðan.
-7. `nodemon keystone` (helst í tmux sessjón) til að ræsa þróunarserver. Athugið að `node keystone` gerir ekki live reload ef eitthvað breytist, þess vegna er `nodemon` þægilegra.
+7. `nodemon keystone` (helst í tmux sessjón) til að ræsa þróunarserver. Athugið að `node keystone` gerir ekki live reload ef eitthvað breytist, þess vegna er `nodemon` þægilegra. Endurræsing getur þó tekið töluverðan tíma (um 10 sek.), líklega vegna þess að allt er hlaðið inn upp á nýtt og ekki bara það sem breytt var.
 
 ## Skráin `.env`
 
@@ -108,13 +110,11 @@ Heildarlisti yfir stillingar sem Keystone sjálft gerir ráð fyrir að hægt s�
 
 Áhugasömum er bent á að skoða keystone-kóðahirsluna til að komast að því nákvæmlega hvaða áhrif hver stilling fyrir sig hefur á virknina.
 
-## Athugasemd um útgáfu 0.4
+## Um útgáfu 0.4
 
-Útgáfa 0.4 af Keystone er væntanleg innan tíðar – vonandi í desemberbyrjun 2015. Hún felur í sér miklar breytingar á stjórnborðinu, sem verður byggt á React og mun auðveldara að útvíkka og breyta en núverandi lausn.
+Útgáfa 0.4 af Keystone er væntanleg innan tíðar – vonandi í desember 2015. Hún felur í sér miklar breytingar á stjórnborðinu, sem verður byggt á React. Við höfum ákveðið að nota þessa útgáfu, þótt hún sé bara í alpha sem stendur, og hún er forvalin í þegar uppsetningarleiðbeiningum þessum er fylgt.
 
-Við munum vinna á grundvelli alpha-útgáfu af 0.4, a.m.k. þar til hún er tilbúin, en þar sem við (a) þurfum hugsanlega að breyta einhverju í kerfinu til að ná fram þeirri virkni sem við viljum; og (b) þurfum tiltölulega stöðugan grundvöll sem við höfum fulla stjórn yfir, bendir `keystone`-línan í `package.json` á okkar eigin klón af Keystone, þ.e. þar stendur hvorki `"keystone": "^0.3.14"` (fyrir núverandi stable útgáfu) né `"keystone": "https://github.com/keystonejs/keystone.git"` (fyrir núverandi þróunarútgáfu), heldur öllu heldur `"keystone": "https://github.com/akkeri/keystone.git"`.
-
-Munið að keyra `npm install` upp á nýtt við og við ef eitthvað hefur breyst í Keystone-útgáfunni sem við erum að vinna út frá.
+Við fylgjum okkar sérsniðnu útgáfu af Keystone, sem er haldið í sér-branch á okkar [eigin fork](https://github.com/akkeri/keystone) af Keystone. Allar breytingar sem við gerum á kerfinu ættu að vera á þessum branch (sem heitir `akkeri`).
 
 ## Thumbnailer: `imaginary`
 

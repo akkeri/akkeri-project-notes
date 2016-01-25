@@ -4,13 +4,13 @@ Hér er (ófullkominn) listi yfir nokkur atriði sem betur mættu fara varðandi
 
 ## Attachment
 
-- [ ] Vantar upload-virkni.
+- [x] Vantar upload-virkni.
 - [ ] Vantar preview í lista (mynd, ef hún fylgir með, annars content-type tákn, t.d. PDF-lógó).
 - [ ] Innskráður notandi ætti að vera sjálfvalinn við Owner þegar færsla er stofnuð og aðeins superuser ætti að geta sérvalið eða breytt gildinu.
 - [ ] Image ætti að vera neðar í forminu, með preview og upload-möguleika.
-- [ ] Posts ætti ekki að vera í forminu eða þyrfti að breyta í inline (og væri réttara að kalla "link to post" eða álíka). Hugsanlega mætti sleppa því, þar sem eðlilegra er að hugsa um tenginguna frá bloggfærslunni fremur en viðhenginu.
-- [ ] Attachment Path og Bytes ættu að uppfærast sjálfkrafa samhliða upload.
-- [ ] Added, changed og attachment-date ættu að uppfærast sjálfkrafa og vera falin eða readonly
+- [x] Posts ætti ekki að vera í forminu eða þyrfti að breyta í inline (og væri réttara að kalla "link to post" eða álíka). Hugsanlega mætti sleppa því, þar sem eðlilegra er að hugsa um tenginguna frá bloggfærslunni fremur en viðhenginu.
+- [x] Attachment Path og Bytes ættu að uppfærast sjálfkrafa samhliða upload.
+- [x] Added, changed og attachment-date ættu að uppfærast sjálfkrafa og vera falin eða readonly
 - [ ] Active ætti að vera virkt í upphafi.
 
 ## Featured
@@ -26,7 +26,7 @@ Hér er (ófullkominn) listi yfir nokkur atriði sem betur mættu fara varðandi
 - [x] Stofna: Width, Height, Bytes ættu að vera faldir reitir sem fyllast út sjálfkrafa m.v. myndina sem uploadað er.
 - [x] Posts ætti ekki að vera í forminu eða þyrfti að breyta í inline (og væri réttara að kalla "link to post" eða álíka). Hugsanlega mætti sleppa því, þar sem eðlilegra er að hugsa um tenginguna frá bloggfærslunni fremur en myndinni.
 - [x] Added og Changed ættu að uppfærast sjálfkrafa og vera faldir eða readonly.
-- [x] Við upload verður til smámynd sem bara er notuð í admin-kerfinu. Betra væri að búa til dýnamíska smámynd með almennri thumbnailing-lausn (Það gerir ekkert til að hafa þessa auka smámynd - en við notum okkar sérsniðnu smámyndalausn).
+- [x] Við upload verður til smámynd sem bara er notuð í admin-kerfinu. Betra væri að búa til dýnamíska smámynd með almennri thumbnailing-lausn (Það gerir ekkert til að hafa þessa auka smámynd í viðtökumöppunni - en við notum samt okkar sérsniðnu smámyndalausn, þar sem hún er mun sveigjanlegri).
 
 ## Language
 

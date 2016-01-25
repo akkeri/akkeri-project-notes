@@ -22,11 +22,11 @@ Hér er (ófullkominn) listi yfir nokkur atriði sem betur mættu fara varðandi
 
 ## Image
 
-- [ ] List view: Taka út Caption, setja inn preview.
-- [ ] Stofna: Width, Height, Bytes (og e.t.v. líka Image Taken) ættu að vera faldir reitir sem fyllast út sjálfkrafa m.v. myndina sem uploadað er.
-- [ ] Posts ætti ekki að vera í forminu eða þyrfti að breyta í inline (og væri réttara að kalla "link to post" eða álíka). Hugsanlega mætti sleppa því, þar sem eðlilegra er að hugsa um tenginguna frá bloggfærslunni fremur en myndinni.
-- [ ] Added og Changed ættu að uppfærast sjálfkrafa og vera faldir eða readonly.
-- [ ] Við upload verður til smámynd sem bara er notuð í admin-kerfinu. Betra væri að búa til dýnamíska smámynd með almennri thumbnailing-lausn.
+- [x] List view: Taka út Caption, setja inn preview.
+- [x] Stofna: Width, Height, Bytes ættu að vera faldir reitir sem fyllast út sjálfkrafa m.v. myndina sem uploadað er.
+- [x] Posts ætti ekki að vera í forminu eða þyrfti að breyta í inline (og væri réttara að kalla "link to post" eða álíka). Hugsanlega mætti sleppa því, þar sem eðlilegra er að hugsa um tenginguna frá bloggfærslunni fremur en myndinni.
+- [x] Added og Changed ættu að uppfærast sjálfkrafa og vera faldir eða readonly.
+- [x] Við upload verður til smámynd sem bara er notuð í admin-kerfinu. Betra væri að búa til dýnamíska smámynd með almennri thumbnailing-lausn (Það gerir ekkert til að hafa þessa auka smámynd - en við notum okkar sérsniðnu smámyndalausn).
 
 ## Language
 
@@ -55,12 +55,12 @@ Hér er (ófullkominn) listi yfir nokkur atriði sem betur mættu fara varðandi
 
 ## Tag
 
-- [ ] Created sé Read-only og sjálfkrafa uppfært.
-- [ ] Einfaldað form sé sýnt öðrum en superusers (ekki með "For ..."-reitunum, ekki með "Is Important", og ekki með möguleika á að tagga efni sem er búið til af öðrum en innskráðum notanda).
+- [x] Created sé Read-only og sjálfkrafa uppfært.
+- [x] Einfaldað form sé sýnt öðrum en superusers (ekki með "For ..."-reitunum, ekki með "Is Important", og ekki með möguleika á að tagga efni sem er búið til af öðrum en innskráðum notanda).
 
 ## User
 
-- [ ] Falið fyrir öðrum en superusers.
+- [x] Falið fyrir öðrum en superusers.
 - [ ] Bæta þarf við möguleika á að breyta lykilorði notenda (e.t.v. sérstakt form eins og í django-admin).
 - [ ] Aðrir en superusers geti þó breytt eigin upplýsingum og sér í lagi breytt lykilorði.
 
